@@ -1,0 +1,33 @@
+#include <iostream>
+#include <queue>
+using namespace std;
+int main()
+{
+ int i;
+ string ball;
+ queue <string> balls;
+ for(i=0; i<5; i++)
+  {
+  cout<<"Push ball:";
+  cin>>ball;
+  balls.push(ball);
+  }
+  while(!balls.empty())
+  {
+   ball=balls.front();
+   if(ball !="white")
+   {
+    cout<<ball<<endl;
+    balls.pop();
+    if(balls.empty())
+    { 
+     cout<<"There is no white ball!\n";
+     break;
+   }
+} else
+{
+cout<<"White ball!=> Stop Popping.\n";
+break;
+}
+}
+  
